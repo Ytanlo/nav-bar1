@@ -1,0 +1,227 @@
+/*
+    #46211A
+    #693D3D
+    #BA5536
+    #A43820
+    #ffdace
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background: #ffdace;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+nav {
+    background: rgba(186, 85, 54, 1);
+    height: 8rem;
+    width: 100vw;
+    display: block;
+}
+
+label.logo {
+    font-size: 5rem;
+    font-weight: 900;
+    letter-spacing: .5rem;
+    color: #ffdace;
+    line-height: 8rem; /*Misma medida en line-height que en height del padre, centra el texto*/
+    padding: 0 7rem;
+}
+
+
+nav ul {
+    float: right;
+    color: #ffdace;
+}
+
+nav ul li {
+    font-size: 3rem;
+    display: inline-block;
+    line-height: 8rem;
+    margin: 0 2rem;
+}
+
+nav ul li a {
+    color: #ffdace;
+    border-radius: 3px;
+    font-weight: 700;
+}
+
+a:hover {
+    background: rgba(164, 56, 32, .5);
+    color: #fff;
+    transform: scale(1.3);
+    transition: all .5s;    
+}
+
+.check-btn {
+    color: #ffdace;
+    font-size: 4rem;
+    position: absolute;
+    line-height: 8rem;
+    right: 3rem;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+header {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    z-index: -10;
+    background: #ffdace;
+    background-attachment: fixed;
+}
+
+.card-glass {
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50vw;
+    height: 50vh;
+    box-shadow:  0 0 37px #dd9d88, inset 0 0 2000px rgba(255, 255, 255, .5);
+    background-color: rgba(131, 81, 81, 0.123);  
+    backdrop-filter: blur(15px);    
+}
+
+.card-glass h1 {
+    position: relative;
+    text-align: center;
+    line-height: 50vh;
+    font-size: 7rem;
+    color: rgba(186, 85, 54, 1);
+}
+
+@media (max-width:1245px) {
+
+    label.logo {
+        font-size: 4rem;
+        font-weight: 900;
+        letter-spacing: .5rem;
+        color: #ffdace;
+        line-height: 8rem; /*Misma medida en line-height que en height del padre, centra el texto*/
+        padding: 0 3rem;
+    }    
+    
+
+    nav ul li {
+        font-size: 2.5rem;
+        display: inline-block;
+        line-height: 8rem;
+        margin: 0 2rem;
+    }
+
+    .card-glass h1 {
+        position: relative;
+        text-align: center;
+        line-height: 50vh;
+        font-size: 5rem;
+        color: rgba(186, 85, 54, 1);
+    }
+}
+
+@media (max-width:1010px) {
+
+    label.logo {
+        font-size: 4rem;
+        font-weight: 900;
+        letter-spacing: .5rem;
+        color: #ffdace;
+        line-height: 8rem; /*Misma medida en line-height que en height del padre, centra el texto*/
+        padding: 0 3rem;
+    }    
+    
+
+    nav ul li {
+        font-size: 2rem;
+        display: inline-block;
+        line-height: 8rem;
+        margin: 0 2rem;
+    }
+
+    .card-glass h1 {
+        position: relative;
+        text-align: center;
+        line-height: 50vh;
+        font-size: 4rem;
+        color: rgba(186, 85, 54, 1);
+    }
+}
+
+@media (max-width:900px) {
+    .check-btn {
+        display: block;
+        cursor: pointer;
+    }
+
+
+    nav ul {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #693D3D;
+        height: 100%;
+        width: 100%;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav ul li {
+        display: block;
+        position: relative;
+        text-transform: uppercase;
+        font-size: 2.5rem;
+    }
+
+
+
+    nav ul li a {
+        font-weight: 900;
+        padding: 1rem 4rem;
+    }
+
+    a:hover {
+        background: #46211A;
+        color: #fff;
+        transform: scale(1.3);
+        transition: all .5s;    
+    }
+
+    #check:checked ~ ul {
+        left: 0;
+    }
+
+    .card-glass h1 {
+        position: relative;
+        text-align: center;
+        line-height: 10vh;
+        top: 10vh;
+        font-size: 4rem;
+        color: rgba(186, 85, 54, 1);
+    }
+}
+
+
+
